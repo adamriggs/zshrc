@@ -14,6 +14,9 @@ export PS1="%F{214}%K{000}%m%F{015}%K{000}:%F{039}%K{000}%~%F{015}%K{000}\$ "
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# 
+# PROMPT
+#
 parse_git_branch() {
   local branch=$(git branch 2>/dev/null | sed -e '/^\*/!d' -e 's/* \(.*\)/\1/')
   local dirty=$(git status --porcelain 2>/dev/null | grep "^[^ ]" | wc -l | tr -d ' ')
@@ -27,9 +30,6 @@ parse_git_branch() {
   fi
 }
 
-# 
-# PROMPT
-#
 setopt PROMPT_SUBST
 PROMPT='%F{123}%K{000}%m%F{015}%K{000}:%F{039}%K{000}%~%F{141}%}$(parse_git_branch)%{%F{none}%} $ '
 
