@@ -36,6 +36,6 @@ PROMPT='%F{123}%K{000}%m%F{015}%K{000}:%F{039}%K{000}%~%F{141}%}$(parse_git_bran
 #
 # ALIASES FOR COMMANDS
 #
-alias ls='ls -AlGp'
-alias local="cd ~/Local\ Sites"
-alias 829="cd ~/Documents/work/829"
+alias ls='ls -Alp'						# sets ls to automatically list all files except . and .. with directory permissions and a trailing slash for directories
+alias local="cd ~/Local\ Sites"			# easy way to get to the ~/Local Sites directory
+alias 829="cd ~/Documents/work/829"		# easy way to get to the other 829 client files that aren't local websites
