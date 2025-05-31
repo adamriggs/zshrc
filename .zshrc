@@ -36,6 +36,7 @@ PROMPT='%F{123}%K{000}%m%F{015}%K{000}:%F{039}%K{000}%~%F{141}%}$(parse_git_bran
 #
 # ALIASES FOR COMMANDS
 #
-alias ls='ls -Alp'						# sets ls to automatically list all files except . and .. with directory permissions and a trailing slash for directories
+alias ls='ls -Alp'						# sets ls to automatically list all files except . and .. with both permissions and a trainling slash for directories
 alias local="cd ~/Local\ Sites"			# easy way to get to the ~/Local Sites directory
 alias 829="cd ~/Documents/work/829"		# easy way to get to the other 829 client files that aren't local websites
+alias largestfiles="find . -type f -exec ls -l {} + | sort -k5 -nr | head -n 10"	# finds the top 10 largest files recursively in the pwd
