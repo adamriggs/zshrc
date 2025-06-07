@@ -41,7 +41,7 @@ alias local="cd ~/Local\ Sites"			# easy way to get to the ~/Local Sites directo
 alias 829="cd ~/Documents/work/829"		# easy way to get to the other 829 client files that aren't local websites
 alias largestfiles="find . -type f -exec ls -l {} + | sort -k5 -nr | head -n 10"	# finds the top 10 largest files recursively in the pwd
 
-function themes() {
+function themes() {	# this recursively looks for the themes directory and cd's into it
   local dir
   dir=$(find . -type d -name themes -path "*/wp-content/themes" -print -quit)
   if [[ -n "$dir" ]]; then
