@@ -19,7 +19,8 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #
 parse_git_branch() {
   local branch=$(git branch 2>/dev/null | sed -n '/^\*/s/^\* //p')
-  local dirty=$(git status --porcelain=1 --untracked-files=all 2>/dev/null | grep -c "^[^ ]")
+#   local dirty=$(git status --porcelain=1 --untracked-files=all 2>/dev/null | grep -c "^[^ ]")
+  local dirty=$(git status --porcelain | grep -c "^[ MARC]")
 
   if [[ -n "$branch" ]]; then
     if [[ "$dirty" -gt 0 ]]; then
