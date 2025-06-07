@@ -58,7 +58,7 @@ function themes() {
 }
 
 # finds the top 20 largest files recursively in the pwd and outputs their size and path
-# optionally provide a path as an argument - this is great to use on ~/Documents to find what's using up all your harddrive space
+# optionally provide a path as an argument - this is great to use on ~/Documents to find what's using up all your hard drive space
 function largestfiles() {
   local dir="${1:-.}"
   echo -e "🔍 Largest files in: \033[1m$dir\033[0m\n"
